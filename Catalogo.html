@@ -1,0 +1,181 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Ropa</title>
+  <link rel="stylesheet" href="L'Mont.css">
+</head>
+<body>
+  <header>
+    <h1>L'Month</h1>
+    <nav>
+      <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="#">Catalogo</a></li>
+        <li>
+          <div class="dropdown">
+            <button onclick="mostrarContacto()" class="dropbtn">Contacto</button>
+            <div id="contactoDropdown" class="dropdown-content">
+              <p>Teléfono: 123456789</p>
+              <p>Correo: info@example.com</p>
+              <p>Dirección: Calle Ejemplo, Ciudad</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <h2 class="titulo-principal">Nuestros Productos</h2>
+    <section id="productos" class="catalogo tres-columnas">
+      <div class="producto">
+        <div class="imagen-container">
+          <p>Camiseta Roja</p>
+          <img src="remera.png" alt="Camiseta Roja" class="producto-imagen">
+          <div class="descripcion">
+            <p>Camiseta Roja</p>
+            <p>Precio: $20</p>
+            <button onclick="agregarAlCarrito('Camiseta Roja', 20)" class="boton boton-verde">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+      <div class="producto">
+        <div class="imagen-container">
+          <p>Pantalon Azul</p>
+          <img src="remera.png" alt="Pantalón Azul" class="producto-imagen">
+          <div class="descripcion">
+            <p>Pantalon azul</p>
+            <p>Precio: $30</p>
+            <button onclick="agregarAlCarrito('Pantalón Azul', 30)" class="boton boton-verde">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+      <div class="producto">
+        <div class="imagen-container">
+          <p>Vestido Floral</p>
+          <img src="remera.png" alt="Vestido Floral" class="producto-imagen">
+          <div class="descripcion">
+            <p>Vestido Floral</p>
+            <p>Precio: $50</p>
+            <button onclick="agregarAlCarrito('Vestido Floral', 50)" class="boton boton-verde">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+      <div class="producto">
+        <div class="imagen-container">
+          <p>Chaqueta de Cuero</p>
+          <img src="remera.png" alt="Chaqueta de Cuero" class="producto-imagen">
+          <div class="descripcion">
+            <p>Chaqueta de Cuero</p>
+            <p>Precio: $80</p>
+            <button onclick="agregarAlCarrito('Chaqueta de Cuero', 80)" class="boton boton-verde">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+      <div class="producto">
+        <div class="imagen-container">
+          <p>Falda Plisada</p>
+          <img src="remera.png" alt="Falda Plisada" class="producto-imagen">
+          <div class="descripcion">
+            <p>Falda Plisada</p>
+            <p>Precio: $40</p>
+            <button onclick="agregarAlCarrito('Falda Plisada', 40)" class="boton boton-verde">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+      <div class="producto">
+        <div class="imagen-container">
+          <p>Blusa Blanca</p>
+          <img src="remera.png" alt="Blusa Blanca" class="producto-imagen">
+          <div class="descripcion">
+            <p>Blusa Blanca</p>
+            <p>Precio: $25</p>
+            <button onclick="agregarAlCarrito('Blusa Blanca', 25)" class="boton boton-verde">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+      <div class="producto">
+        <div class="imagen-container">
+          <p>Jean Ajustados</p>
+          <img src="remera.png" alt="Jeans Ajustados" class="producto-imagen">
+          <div class="descripcion">
+            <p>Jeans Ajustados</p>
+            <p>Precio: $35</p>
+            <button onclick="agregarAlCarrito('Jeans Ajustados', 35)" class="boton boton-verde">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+      <div class="producto">
+        <div class="imagen-container">
+          <p>Camisa a Cuadros</p>
+          <img src="remera.png" alt="Camisa a Cuadros" class="producto-imagen">
+          <div class="descripcion">
+            <p>Camisa a Cuadros</p>
+            <p>Precio: $45</p>
+            <button onclick="agregarAlCarrito('Camisa a Cuadros', 45)" class="boton boton-verde">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+      <div class="producto">
+        <div class="imagen-container">
+          <p>Shorts</p>
+          <img src="remera.png" alt="Shorts Denim" class="producto-imagen">
+          <div class="descripcion">
+            <p>Shorts Denim</p>
+            <p>Precio: $30</p>
+            <button onclick="agregarAlCarrito('Shorts Denim', 30)" class="boton boton-verde">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+      <div class="producto">
+        <div class="imagen-container">
+          <p>Blazer Negro</p>
+          <img src="remera.png" alt="Blazer Negro" class="producto-imagen">
+          <div class="descripcion">
+            <p>Blazer Negro</p>
+            <p>Precio: $70</p>
+            <button onclick="agregarAlCarrito('Blazer Negro', 70)" class="boton boton-verde">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+      <div class="producto">
+        <div class="imagen-container">
+          <p>Zapatos de Tacon</p>
+          <img src="remera.png" alt="Zapatos de Tacón" class="producto-imagen">
+          <div class="descripcion">
+            <p>Zapatos de Tacón</p>
+            <p>Precio: $60</p>
+            <button onclick="agregarAlCarrito('Zapatos de Tacón', 60)" class="boton boton-verde">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+      <div class="producto">
+        <div class="imagen-container">
+          <p>Bufanda Gris</p>
+          <img src="remera.png" alt="Bufanda Gris" class="producto-imagen">
+          <div class="descripcion">
+            <p>Bufanda Gris</p>
+            <p>Precio: $15</p>
+            <button onclick="agregarAlCarrito('Bufanda Gris', 15)" class="boton boton-verde">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <aside id="carrito" class="carrito-vacio">
+      <h2>Carrito de Compras</h2>
+      <ul id="lista-carrito"></ul>
+      <p id="total">Total: $0</p>
+      <button onclick="vaciarCarrito()" class="boton boton-rojo">Vaciar Carrito</button>
+      <a href="https://api.whatsapp.com/send?phone=543425594220&text=Hola%2C%20quiero%20ordenar%20los%20siguientes%20productos%3A%20{Aquí%20escribe%20los%20productos%20del%20carrito}" class="boton boton-verde">Contactar por WhatsApp</a>
+    </aside>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 Tienda de Ropa</p>
+  </footer>
+
+  <script src="L'Mont.js"></script>
+</body>
+</html>

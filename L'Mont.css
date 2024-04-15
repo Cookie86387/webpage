@@ -1,0 +1,292 @@
+/* Estilos L'Mont.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  overflow-x: hidden; /* Evitar barra de desplazamiento horizontal */
+}
+
+header {
+  margin: 0;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+h1{
+  margin-right:40px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+  margin: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s; /* Transición de color al pasar el mouse */
+}
+
+nav ul li a:hover {
+  color: #ff7f50; /* Color de texto al pasar el mouse */
+}
+
+.titulo-principal {
+  margin-top: 20px; /* Mayor espacio superior */
+  font-size: 2.5rem; /* Tamaño del título aumentado */
+  color: #333; /* Color de texto más oscuro */
+}
+
+main {
+  text-align: center;
+  padding: 10px;
+}
+
+.titulo-principal {
+  margin-top: 20px;
+  right: 20px;
+}
+
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+/* Estilos para el menú desplegable */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px; /* Redondear los bordes */
+  transition: background-color 0.3s, color 0.3s; /* Añadir transición para el color de fondo y texto */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 10px;
+  border-radius: 10px; /* Redondear los bordes */
+}
+
+.dropdown-content p {
+  margin: 10px 0;
+  color: #333; /* Cambiar el color del texto */
+  transition: color 0.3s; /* Añadir transición para el color del texto */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  animation: slideIn 0.5s forwards; /* Añadir animación al desplegar el menú */
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #ff7f50; /* Cambiar el color de fondo al pasar el mouse */
+  color: #333; /* Cambiar el color del texto al pasar el mouse */
+}
+
+
+
+.producto {
+  background-color: #ffffff; /*Cambiar color de la parte de adentro de donde estan las imagenes*/
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir sombra */
+  transition: transform 0.3s ease;
+  display: inline-block; /* Cambiar a display en línea para evitar el comportamiento de bloque */
+  margin: 20px; /* Añadir un poco de margen entre los productos */
+  position: relative; /* Posicionamiento relativo para contener la descripción */
+}
+
+.producto:hover {
+  transform: translateY(-10px); /* Ajustar la elevación al pasar el mouse */
+}
+
+.producto .imagen-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.producto .producto-imagen {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease; /* Transición al pasar el mouse */
+}
+
+.producto:hover .producto-imagen {
+  transform: translateY(-20px); /* Mostrar la imagen agrandada al pasar el mouse */
+}
+
+.producto .descripcion {
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: bottom 0.3s ease; /* Transición al pasar el mouse */
+}
+
+.producto:hover .descripcion {
+  bottom: 0; /* Mostrar la descripción al pasar el mouse */
+}
+
+.boton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+.boton-verde,
+.boton-rojo,
+.boton-whatsapp {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1.1rem; /* Aumenta el tamaño de la fuente */
+  padding: 10px 30px; /* Ajusta el padding horizontal del botón de WhatsApp */
+  transition: background-color 0.3s, opacity 0.3s; /* Añadir transición a ambos botones */
+}
+
+.boton-verde:hover{
+  background-color: #3e8740;
+}
+
+.boton-rojo {
+  background-color: #f44336;
+  margin-left: 10px; /* Agregar un margen izquierdo para separar los botones */
+}
+
+.boton-rojo:hover{
+  background-color: #cb372c;
+}
+
+.carrito-vacio {
+  display: none;
+}
+
+#carrito.carrito-lleno {
+  display: block;
+}
+
+#carrito {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-left: 20px; /* Alinea el carrito con el borde izquierdo */
+  margin-right: 20px; /* Alinea el carrito con el borde derecho */
+  position: relative; /* Permite posicionar el botón "Vaciar Carrito" de manera absoluta */
+}
+
+#carrito h2 {
+  margin-top: 0; /* Elimina el margen superior del título */
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0px;
+  width: 100%; /* Ancho completo del footer */
+  bottom: 0; /* Colocar el footer al fondo */
+}
+
+/* Nuevo estilo para el botón "Quitar" */
+.boton-quitar {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 10px;
+  transition: background-color 0.3s; /* Agregamos una transición al color de fondo */
+}
+
+.boton-quitar:hover {
+  background-color: #d32f2f; /* Cambiamos el color de fondo al pasar el mouse */
+}
+
+/* Estilos CSS para diseño responsive */
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+  /* Ajustar el tamaño de fuente del encabezado principal */
+  header h1 {
+      font-size: 1.5rem;
+  }
+
+  /* Ajustar el tamaño de fuente del título principal */
+  .titulo-principal {
+      font-size: 1.5rem;
+  }
+
+  /* Cambiar a una sola columna para los productos */
+  .catalogo {
+      grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Estilos para tablets y dispositivos de tamaño mediano */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Ajustar el tamaño de fuente del encabezado principal */
+  header h1 {
+      font-size: 2rem;
+  }
+
+  /* Ajustar el tamaño de fuente del título principal */
+  .titulo-principal {
+      font-size: 2rem;
+  }
+}
+
+/* Estilos para dispositivos de pantalla grande */
+@media only screen and (min-width: 1025px) {
+  /* No se necesita ningún ajuste adicional */
+}
+
+/* Cambio de color de fondo donde se encuentran los productos */
+#productos {
+  background-color: #f7f7f7; /* Agregamos un fondo a la sección de productos */
+  padding: 20px; /* Ajuste de espaciado interno */
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Ropa</title>
+  <link rel="stylesheet" href="L'Mont.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    main {
+      text-align: center;
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 20px;
+      opacity: 0; /* Inicialmente, las secciones están ocultas */
+      animation: fadeIn 2s forwards; /* Animación para aparecer gradualmente */
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .intro {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>L'Month</h1>
+    <nav>
+      <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="Catalogo.html">Catalogo</a></li>
+        <li>
+          <div class="dropdown">
+            <button onclick="mostrarContacto()" class="dropbtn">Contacto</button>
+            <div id="contactoDropdown" class="dropdown-content">
+              <p>Teléfono: 123456789</p>
+              <p>Correo: info@example.com</p>
+              <p>Dirección: Calle Ejemplo, Ciudad</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="intro">
+      <p class="intro">¡Descubre la moda más actualizada en nuestra tienda de ropa!</p>
+    </section>
+
+    <section id="productos" class="catalogo tres-columnas">
+      <!-- Aquí va tu catálogo de productos -->
+    </section>
+    
+    <aside id="carrito" class="carrito-vacio">
+      <h2>Carrito de Compras</h2>
+      <ul id="lista-carrito"></ul>
+      <p id="total">Total: $0</p>
+      <button onclick="vaciarCarrito()" class="boton boton-rojo">Vaciar Carrito</button>
+      <a href="https://api.whatsapp.com/send?phone=543425594220&text=Hola%2C%20quiero%20ordenar%20los%20siguientes%20productos%3A%20{Aquí%20escribe%20los%20productos%20del%20carrito}" class="boton boton-verde">Contactar por WhatsApp</a>
+    </aside>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 Tienda de Ropa</p>
+  </footer>
+
+  <script src="L'Mont.js"></script>
+</body>
+</html>
